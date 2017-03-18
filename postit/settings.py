@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+AZURE_ACCOUNT_NAME = 'moonsticky'
+AZURE_CONTAINER = 'test'
+
+AZURE_ACCOUNT_KEY = os.environ['AZURE_ACCESS_KEY']
